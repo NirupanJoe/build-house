@@ -1,7 +1,21 @@
 .App {
 	text-align: center;
 
-	button {
-		font-weight: bold;
+	.task {
+		background: #f3f397;
+		display: flex;
+		border: 1px solid #868600;
+		flex-direction: column;
+		padding: 20px;
+
+		.name {
+			color: rgb(48, 95, 252);
+			align-self: flex-start;
+		}
+
+		.total-cost {
+			color: rgb(247, 30, 30);
+			align-self: flex-end;
+		}
 	}
 }

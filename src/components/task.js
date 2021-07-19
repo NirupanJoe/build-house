@@ -2,8 +2,8 @@ import { React } from 'react';
 
 const Task = ({ tasks, name, totalCost }) =>
 	<div className="task">
-		<div>{name}</div>
-		<div>{totalCost}</div>
+		<div className="name">{name}</div>
+		<div className="total-cost">{totalCost}</div>
 		<div>{tasks.map(Task)}</div>
 	</div>;
 
