@@ -1,17 +1,16 @@
 import { React, useEffect } from 'react';
 import './App.scss';
-import context from './core/context';
 import SampleService from './services/sample';
-import SimpleButton from './components/simpleButton';
-
+import Task from './components/task';
+import context from './core/context';
+import TaskManagement from './services/taskManagement';
 const App = () => {
 	useEffect(SampleService.sayHai, []);
+	const task = TaskManagement.process(context.config.task);
 
 	return (
 		<div className="App">
-			<div>Count: { context.state.count }</div>
-			<div>{ SimpleButton() }</div>
-			<div>Refresh ID: { context.state.refreshID }</div>
+			{Task(task)}
 		</div>
 	);
 };
