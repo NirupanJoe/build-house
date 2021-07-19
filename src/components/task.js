@@ -1,7 +1,7 @@
 import { React } from 'react';
 
 const Task = ({ tasks, name, totalCost }) =>
-	<div className="task-title">
+	<div key={ name } className="task-title">
 		<div className="task">
 			<div className="name">{name}</div>
 			<div className="total-cost">{totalCost}</div>
